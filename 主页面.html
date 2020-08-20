@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title></title>
+	<link rel="stylesheet" href="css/css.css">
+</head>
+
+<body>
+
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/dist/echarts.js"></script>
+	<script type="text/javascript" src="js/echarts-gl-master/dist/echarts-gl.js"></script>
+	<script type="text/javascript" src="js/echarts-wordcloud-master/dist/echarts-wordcloud.js"></script>
+	<script type="text/javascript" src="js/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/china.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/anhui.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/aomen.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/beijing.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/chongqing.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/fujian.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/gansu.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/guangdong.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/guangxi.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/guizhou.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/hainan.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/hebei.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/heilongjiang.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/henan.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/hubei.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/hunan.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/jiangsu.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/jiangxi.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/jilin.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/liaoning.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/neimenggu.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/ningxia.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/qinghai.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/shandong.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/shanghai.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/shanxi.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/shanxi1.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/sichuan.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/taiwan.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/tianjin.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/xianggang.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/xinjiang.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/xizang.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/yunnan.js"></script>
+	<script type="text/javascript" src="js/incubator-echarts-4.4.0/map/js/province/zhejiang.js"></script>
+	<script type="text/javascript" src="js/convertPinyin.js"></script>
+	<script type="text/javascript" src="js/provienceOrCity.js"></script>
+
+
+	<div class="canvas" style="opacity: .2">
+		<iframe frameborder="0" src="js/动态粒子.html" style="width: 100%; height: 942px"></iframe>
+	</div>
+	<div class="head">
+		<h1>招聘信息数据分析可视化系统</h1>
+		<div class="weather">
+			<span id="showTime"></span>
+		</div>
+		<script type="text/javascript" src="js/showTime.js"></script>
+	</div>
+	<div class="mainbox">
+		<div class="boxall" id="mapBox">
+			<div class="boxTitle">
+				<div class="boxStyleHeadLeft"></div>
+				<button id="fanhuiBTN" class="btn">返回上级</button>
+				<div id="mapTitle" class="title">全国就业形势与GDP的关联性分析</div>
+				<button id="qiehuanBTN" class="btn">行业倾向</button>
+				<div class="boxStyleHeadRight"></div>
+			</div>
+			<div id="mapChartBox3D"></div>
+			<div id="mapChartBox2D"></div>
+			<div class="boxTale">
+				<div class="boxStyleFootLeft"></div>
+				<div class="boxStyleFootRight"></div>
+			</div>
+		</div>
+
+		<div class="boxall" id="wordCloudBox">
+			<div class="boxTitle">
+				<div class="boxStyleHeadLeft"></div>
+				<div id="wordCloudTitle" class="title">全国招聘数据特征词</div>
+				<div class="boxStyleHeadRight"></div>
+			</div>
+			<div id="wordCloudBoxBody"></div>
+			<div class="boxTale">
+				<div class="boxStyleFootLeft"></div>
+				<div class="boxStyleFootRight"></div>
+			</div>
+		</div>
+
+		<div class="boxall" id="pieBox">
+			<div class="boxTitle">
+				<div class="boxStyleHeadLeft"></div>
+				<button id="ChangeBTN" class="btn">切换对比</button>
+				<div id="pieTitle" class="title">全国招聘薪资水平关联性分析</div>
+				<button id="ReturnBTN" class="btn">返回全国</button>
+				<div class="boxStyleHeadRight"></div>
+			</div>
+			<div id="pieBoxBody"></div>
+			<div id="pieBoxBodyLeft"></div>
+			<div id="pieBoxBodyRight"></div>
+			<div class="boxTale">
+				<div class="boxStyleFootLeft"></div>
+				<div class="boxStyleFootRight"></div>
+			</div>
+		</div>
+
+		<div class="boxall" id="jobBox">
+			<div class="boxTitle">
+				<div class="boxStyleHeadLeft"></div>
+				<div id="jobTitle" class="title">搜索地区公司</div>
+				<div class="boxStyleHeadRight"></div>
+			</div>
+			<div id="jobInput">
+				<input type="text" id="provience" class="jobinput" placeholder="省份名称">
+				<input type="text" id="city" class="jobinput" placeholder="城市名称">
+				<input type="text" id="industry" class="jobinput" placeholder="行业类别">
+				<button id="submit">查询</button>
+			</div>
+			<div id="jobBoxBody">
+				<table border="1px" id="jobTable""></table>
+				</div>
+				<div class=" boxTale">
+					<div class="boxStyleFootLeft"></div>
+					<div class="boxStyleFootRight"></div>
+			</div>
+		</div>
+	</div>
+
+	<script type="text/javascript" src="js/task1andtask2.js"></script>
+	<script type="text/javascript" src="js/task3.js"></script>
+	<script type="text/javascript" src="js/task4.js"></script>
+
+</body>
+
+</html>

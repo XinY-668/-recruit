@@ -1,0 +1,207 @@
+﻿@charset "utf-8";
+/* CSS Document */
+/**{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}*/
+*,body{
+	padding: 0;	
+	margin: 0;
+	color: #222;
+	font-family: "微软雅黑";
+	overflow: hidden;
+}
+body{ 
+	background: url(../img/bg.jpg);
+	center: top; 
+	background-size:cover;
+}
+ul{
+	list-style: none;
+}
+li{
+	color: white;
+}
+
+.canvas{position: absolute; width:100%; left: 0; top: 0; height: 99%; z-index: 1;}
+.head{ height:88px; background: url(../img/head_bg.png) no-repeat center center; background-size: 100% 100%; position: relative; z-index: 100;}
+.head h1{ color:#fff; text-align: center; font-size: 3rem;}
+.weather{ position:absolute; right:.3rem; top:.75rem;}
+.weather span{color:rgba(255,255,255,.7); font-size: 1.2rem;}
+
+.mainbox{ width: 100%; height: 853px;}
+
+.boxall{ background: rgba(255,255,255,.04) url(../img/line1.png); background-size: 100% auto; margin: 0px auto;z-index: 10;}
+.boxTitle{width: 99.96%;height: 50px;position: relative;float: left;}
+.boxStyleHeadLeft{width: 12px;height: 12px;border-top: 2px solid dodgerblue;border-left: 2px solid dodgerblue;position: relative;float: left;}
+.boxStyleHeadRight{width: 12px;height: 12px;border-top: 2px solid dodgerblue;border-right: 2px solid dodgerblue;position: relative;float: right;}
+.btn{
+	width: 164px;
+	height: 100%;
+	font-size: 34px;
+	font-weight: bold;
+	text-align: center;
+	color: steelblue;
+	background-color: lightgoldenrodyellow;
+}
+#fanhuiBTN{
+	position: absolute;
+	left: 2.5%;
+}
+.title{
+	width: 60%;
+	height: 100%;
+	font-size: 37px;
+	font-weight: bold;
+	text-align: center;
+	color: steelblue;
+	position: absolute;
+	left: 20%;
+}
+#wordCloudTitle{
+	width: 93%;
+	left: 3.5%;
+}
+#qiehuanBTN{
+	position: absolute;
+	left: 84.5%;
+	top: 0px;
+}
+#mapChartBox3D{
+	width: 1248px;
+	height: 414px;
+	/*background: dodgerblue;*/
+	visibility:visible;
+}
+#mapChartBox2D{
+	width: 1248px;
+	height: 414px;
+	position: absolute;
+	top: 50px;
+	/*background: palegreen;*/
+	visibility:hidden;
+}
+#wordCloudBoxBody{
+	width: 100%;
+	height: 270px;
+	/*visibility:hidden;*/
+}
+#ChangeBTN{
+	position: absolute;
+	right: 2.5%;
+}
+#ReturnBTN{
+	position: absolute;
+	left: 2.5%;
+}
+#pieBoxBody{
+	width: 100%;
+	height: 294px;
+	visibility:visible;
+}
+#pieBoxBodyLeft{
+	width: 50%;
+	height: 294px;
+	position: absolute;
+	top: 14%;
+	left: 0;
+	visibility:hidden;
+}
+#pieBoxBodyRight{
+	width: 50%;
+	height: 294px;
+	position: absolute;
+	top: 14%;
+	left: 50%;
+	visibility:hidden;
+}
+#jobInput{
+	width: 100%;
+	height: 40px;
+}
+.jobinput{
+	width: 28%;
+	height: 80%;
+	text-align: center;
+}
+#jobTitle{
+	width: 93%;
+	left: 3.5%;
+}
+#submit{
+	width: 11%;
+	height: 80%;
+}
+/*#jobTable{
+	width: 100%;
+	text-align: center;
+}*/
+table {
+	/*设置相邻单元格的边框间的距离*/
+	border-spacing: 0;
+	/*表格设置合并边框模型*/
+	border-collapse: collapse;
+	text-align: center;
+}
+table tbody {
+	display: block;
+	height: 375px;
+	overflow-y: scroll;
+}
+table thead,tbody tr {
+	display: table;
+	width: 100%;
+	table-layout: fixed;
+}
+table tr th:first-child,table tr td:first-child{
+	width:40px;
+}
+/*关键设置：滚动条默认宽度是16px 将thead的宽度减16px*/
+table thead {
+	width: calc( 100% - 1em)
+}
+table thead th {
+	background: #ccc;
+}
+font{
+	color: white;
+}
+#jobBoxBody{
+	width: 100%;
+	height: 400px;
+}
+.boxTale{width: 100%;height: 14px;position: relative;bottom: 0;float: left;}
+.boxStyleFootLeft{width: 12px;height: 12px;border-left: 2px solid dodgerblue;border-bottom: 2px solid dodgerblue;position: relative;float: left;}
+.boxStyleFootRight{width: 12px;height: 12px;border-right: 2px solid dodgerblue;border-bottom: 2px solid dodgerblue;position: relative;float: right;}
+
+#mapBox{
+	width: 65%;
+	height: 56%;
+	position: relative;
+	float: left;
+	left: 0.6%;
+}
+#wordCloudBox{
+	width: 33.2%;
+	height: 39.2%;
+	position: relative;
+	float: left;
+	left: 1.2%;
+}
+#pieBox{
+	width: 65%;
+	height: 42%;
+	position: relative;
+	float: left;
+	left: 0.6%;
+	top: 1.6%;
+}
+#jobBox{
+	width: 33.2%;
+	height: 59.2%;
+	position: relative;
+	float: left;
+	left: 1.2%;
+	top: -15.6%;
+}
